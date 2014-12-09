@@ -1,0 +1,16 @@
+﻿@model MealPlan.Models.Diary
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4>@Model.Date.ToString("dd/MM/yyyy")</h4>
+
+@foreach (var meal in Model.Meals)
+{
+    <h3>@meal.Name</h3>
+
+    <ul>
+        <li><a href="@Url.Action("Add", "Diary", new { Meal = meal.Id })">Add Food</a></li>
+    </ul>
+}

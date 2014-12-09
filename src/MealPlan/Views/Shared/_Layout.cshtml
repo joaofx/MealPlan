@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    <link rel="stylesheet" href="@Url.Content("~/Content/pure-min.css")">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="@Url.Content("~/Content/grids-responsive-old-ie-min.css")">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="@Url.Content("~/Content/grids-responsive-min.css")">
+    <!--<![endif]-->
+
+</head>
+<body>
+    <div class="pure-g">
+        <div class="pure-u-5-5">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
